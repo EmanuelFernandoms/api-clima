@@ -19,7 +19,7 @@ let cidade;
 
 
 function puxarDadosClima() {
-    fetch(`http://api.weatherstack.com/current?access_key=245b8e0ba7448ef83add49d4d5fef95b&query=${cidade}`)
+    fetch(`https://api.weatherstack.com/current?access_key=245b8e0ba7448ef83add49d4d5fef95b&query=${cidade}`)
     .then(dados => dados.json())
     .then(dados => {
         // console.log(dados);
