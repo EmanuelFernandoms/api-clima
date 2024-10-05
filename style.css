@@ -1,0 +1,245 @@
+:root{
+    --backgroud-nuvem: white;
+    --backgroud-horario: #99d9ea;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--backgroud-horario);
+    transition: .2s;
+    /* background-image: url("https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif"); */
+}
+
+.container{
+    width: 100%;
+    height: 400px;
+}
+
+.nuvens{
+    display: flex;
+    justify-content: center;
+}
+
+.nuvem{
+    position: absolute;
+    width: 220px;
+    height: 70px;
+    background: var(--backgroud-nuvem);
+    border-radius: 70px;
+    filter: drop-shadow(8px 8px 0 #0005);
+    z-index: 10;
+    transition: .2s;
+}
+
+.n1{
+    left: 10%;
+    top: 30vh;
+}
+
+.n2{
+    left: 80%;
+    top: 40vh;
+}
+
+.n3{
+    left: 60%;
+    top: 25vh;
+}
+
+.n4{
+    left: 15%;
+    top: 42vh;
+}
+
+.nuvem div {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    width: 75px;
+    height: 75px;
+    background: var(--backgroud-nuvem);
+    border-radius: 50%;
+    box-shadow: 60px -6px 0 20px var(--backgroud-nuvem);
+}
+
+.sol{
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
+    height: 225px;
+    background-color: #FFDD33;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 3s infinite linear;
+    box-shadow: 0 10px 10px rgba(0,0,0,.1);
+    /* display: none; */
+}
+
+.sol::before{
+    content: "";
+    width: 315px;
+    height: 315px;
+    border-radius: 50%;
+    background-color: rgba(255,221,51,.5);
+    filter: blur(2px);
+    position: absolute;
+    box-shadow: 0 10px 10px rgba (0,0,0,.1);
+}
+
+.sol::after{
+    content: "";
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: rgba(255, 221, 51, .3);
+    filter: blur(2px);
+    position: absolute;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.lua{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
+    height: 225px;
+    background-color: #dcdde1;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 3s infinite linear;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+}
+
+.lua::before {
+    content: "";
+    width: 325px;
+    height: 325px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #c4c5c749, #9c9ea35e);
+    position: absolute;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+}
+
+.lua::after {
+    content: "";
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: rgba(132, 143, 225, .1);
+    filter: blur(2px);
+    position: absolute;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+}
+
+.cratera{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .15);
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, .3);
+    opacity: 0.8;
+}
+
+.pequena{
+    width: 30px;
+    height: 30px;
+    top: 40px;
+    left: 154px;
+}
+
+.media{
+    width: 50px;
+    height: 50px;
+    top: 112px;
+    left: 19px;
+}
+
+.grande{
+    width: 80px;
+    height: 80px;
+    top: 16px;
+    left: 40px;
+}
+
+.muito-grande{
+    width: 100px;
+    height: 100px;
+    top: 101px;
+    left: 60px;
+}
+
+
+form{
+    margin: 100px auto;
+    width: 40%;
+    text-align: center;
+    height: 180px;
+    padding: 20px;
+    background-color: rgba(54, 54, 54, 0.5);
+}
+
+form input{
+    height: 35px;
+    margin: auto;
+    width: 90%;
+    border-radius: 3px;
+    border: none;
+    margin-top: 10px;
+}
+
+input[type="text"]{
+    padding: 5px;
+}
+
+input[type="submit"]{
+}
+
+@media (max-width: 800px){
+    
+    .n1{
+        left: 10%;
+        top: 40vh;
+    }
+    
+    .n2{
+        display: none;
+    }
+    
+    .n3{
+        display: none;
+    }
+
+    .n4{
+        display: none;
+    }
+
+    form{
+        width: 90%;
+    }
+}
